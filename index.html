@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>
+		Image slider
+	</title>
+	
+	<link href =
+"https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+			rel = "stylesheet">
+	
+	<script src =
+"https://code.jquery.com/jquery-1.10.2.js">
+	</script>
+	
+	<script src =
+"https://code.jquery.com/ui/1.10.4/jquery-ui.js">
+	</script>
+		
+	<style>
+		body {
+			text-align: center;
+		}
+  /* To set image's dimension*/
+		img{
+			height: 200px;
+			width: 350px;
+		}
+
+		#imageList
+		{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		}
+		#imageList div
+		{
+			margin: 0 4px 4px 4px;
+			padding: 0.4em;			
+			display: inline-block;
+		}
+
+		#output{
+		margin: 0 2px 2px 2px;
+		padding: 0.4em;
+		padding-left: 1.5em;
+		width: 250px;
+		border: 2px solid dark-green;
+		background : gray;
+		}
+		.listitemClass
+		{
+			border: 1px solid #006400;
+			width: 350px;	
+		}
+		.height{
+			height: 10px;
+		}
+	</style>
+		
+	<script>
+		$(function() {
+			$( "#imageList" ).sortable({
+			update: function(event, ui) {
+				getIdsOfImages();
+			}//end update		
+			});
+		});
+	</script>
+</head>
+	
+<body>
+	<h1 style="color:blue">Aniket Gallery</h1>
+	
+	<div class="height"></div><br>
+	
+	<div id = "imageList">
+		<div id="image1" class = "listitemClass">
+			<img src="image\img-7.jpg" alt="">
+		</div>
+		
+		<div id="image2" class = "listitemClass">
+			<img src="image\img-8.jpg" alt="">
+		</div>
+
+		<div id="image3" class = "listitemClass">
+			<img src="image\img-9.jpg" alt="">
+		</div>
+
+		<div id="image4" class = "listitemClass">
+			<img src="image\img-10.jpg" alt="">
+		</div>
+
+	</div>
+</body>
+
+</html>
